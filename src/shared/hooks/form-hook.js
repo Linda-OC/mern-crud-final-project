@@ -1,4 +1,7 @@
-import {useCallback, useReducer} from 'react';
+import {
+    useCallback,
+    useReducer
+} from 'react';
 
 const formReducer = (state, action) => {
     switch (action.type) {
@@ -25,11 +28,10 @@ const formReducer = (state, action) => {
                     },
                     isValid: formIsValid
             };
-        
         case 'SET_DATA':
-            return { 
+            return {
                 inputs: action.inputs,
-                isValid: action.formIsValid
+                    isValid: action.formIsValid
             };
         default:
             return state;
